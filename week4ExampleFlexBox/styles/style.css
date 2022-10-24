@@ -1,0 +1,72 @@
+/* Define custom variables */
+:root {
+    --primaryColor: black;
+    --secondaryColor: white;
+    --alternativeColor: rgba(79, 85, 87, 0.9);
+    --greenColor: rgba(11, 130, 11, .7);
+    /* none | h-offset (X) v-offset (Y) blur spread color |inset|initial|inherit*/
+    --mainBoxShadow: .3vw .3vw 1vw rgba(120, 200, 87, 11);
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+main {
+    min-width: 100vw;   
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    gap: 20px;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+.item {
+    border: 2px solid var(--alternativeColor)
+    width: 200px;
+    height: 200px;
+}
+
+.item:nth-child(even) {
+    background-color: var(--greenColor);
+}
+.item:nth-child(odd) {
+    background-color: var(--alternativeColor);
+}
+/* /* .item:nth-of-type(1) {
+    box-shadow: var(--mainBoxShadow);
+    order: 3;
+}
+.item:nth-of-type(2) {
+    box-shadow: var(--mainBoxShadow);
+    order: 4;
+}
+.item:nth-of-type(3) {
+    box-shadow: .5vw .5vw .4vw rgba(104, 175, 199, 0.9);
+    order: 1;
+}
+.item:nth-of-type(4) {
+    box-shadow: .5vw .5vw .4vw rgba(104, 175, 199, 0.9);
+    order: 2;
+}  */
+/* .item:nth-of-type(2) {
+    flex-grow: 1;
+}
+.item:nth-of-type(4) {
+    flex-grow: 2;
+} 
+ /* .item:nth-last-of-type(3) {
+    flex-shrink: 2;
+ } */
+ /* .item:nth-of-type(4) {
+    flex-shrink: 1;
+} */
